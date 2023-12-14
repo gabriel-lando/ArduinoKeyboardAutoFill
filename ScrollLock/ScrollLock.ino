@@ -5,9 +5,9 @@
 // Install HID-Project library from NicoHood
 #include "HID-Project.h"
 
-// Email (optional) and password
-String email = "";
-String pass = "";
+// Header file with the credentials
+// Take a look at the Credentials.sample.h
+#include "Credentials.h"
 
 bool g_bScrollLockStatus = false;
 void setup() {

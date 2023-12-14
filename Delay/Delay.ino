@@ -5,9 +5,9 @@
 // Time in 'ms' to wait before sending characters
 const int INITIAL_DELAY = 5000;
 
-// Email (optional) and password
-String email = "";
-String pass = "";
+// Header file with the credentials
+// Take a look at the Credentials.sample.h
+#include "Credentials.h"
 
 void setup() {
   Keyboard.begin();
