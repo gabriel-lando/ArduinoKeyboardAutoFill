@@ -18,7 +18,7 @@ void setup() {
 }
 
 void loop() {
-  delay(500);
+  delay(100);
 
   auto bCurrentStatus = getScrollLockStatus();
   if (bCurrentStatus && !g_bScrollLockStatus) {
@@ -49,12 +49,16 @@ void writeString(String str) {
   }
 }
 
+void waitNextKey() {
+  delay(random(30, 80));
+}
+
 void writeChar(char c) {
   BootKeyboard.write(c);
-  delay(random(50, 120));
+  waitNextKey();
 }
 
 void writeKey(KeyboardKeycode c) {
   BootKeyboard.write(c);
-  delay(random(50, 120));
+  waitNextKey();
 }
