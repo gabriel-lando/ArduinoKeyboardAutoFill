@@ -25,6 +25,7 @@ void loop() {
     Serial.println("Scroll Lock pressed");
   } else if (!bCurrentStatus && g_bScrollLockStatus) {
     Serial.println("Scroll Lock released");
+    randomSeed(micros());
     writeEmailAndPass();
   }
   g_bScrollLockStatus = bCurrentStatus;
